@@ -1,0 +1,60 @@
+*.csv
+*.tsv
+*.xlsx
+*.xls
+*.parquet
+*.json
+*.jsonl
+*.xml
+*.sql
+*.db
+*.sqlite
+*.h5
+*.hdf5
+*.pickle
+*.pkl
+*.feather
+*.avro
+
+# Large data directories
+data/
+datasets/
+raw_data/
+processed_data/
+outputs/
+results/
+cache/
+tmp/
+
+# Models & weights
+*.model
+*.joblib
+*.h5
+*.ckpt
+*.pth
+*.safetensors
+models/
+checkpoints/
+
+# Notebooks & outputs
+.ipynb_checkpoints/
+plots/
+figures/
+*.png
+*.pdf
+*.svg
+
+# Environment & configs
+.env
+*.log
+logs/
+
+# Python
+__pycache__/
+*.pyc
+venv/
+.venv/
+
+# System
+.DS_Store
+Thumbs.db
