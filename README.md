@@ -104,16 +104,26 @@ The `src/funnel_utils.py` module provides:
 
 ## 🔄 Data Flow
 
-flowchart TD
-    A[wise_funnel_events.csv] --> B[normalize_events()]
-    B --> C[attach_transfer_keys()]
-    C --> D[build_transfer_level()]
-    D --> E[transfers_level.csv]
-    E --> F[daily_funnel()]
+graph TD
+  Start((Start)) --> A[wise_funnel_events.csv]
+  A --> B[normalize_events]
+  B --> C[attach_transfer_keys]
+  C --> QC1{QC Pass?}
+  QC1 -- yes --> D[build_transfer_level]
+  QC1 -- no --> Error[Log & Halt]
+  D --> E[transfers_level.csv]
+
+  subgraph Analysis
+    E --> F[daily_funnel]
     F --> G[Segmented Analysis]
     E --> H[Cohort Analysis]
+  end
+
+  subgraph Reporting
     G --> I[Visualizations]
     H --> I
+    I --> End((Done))
+  end
 
 ## 📚 Additional Resources
 
