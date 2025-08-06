@@ -17,32 +17,20 @@
 *.avro
 
 # Large data directories
-data/
-datasets/
 raw_data/
 processed_data/
 outputs/
 results/
 cache/
 tmp/
+deprecated/
 
 # Models & weights
-*.model
-*.joblib
-*.h5
-*.ckpt
-*.pth
-*.safetensors
+
 models/
 checkpoints/
 
-# Notebooks & outputs
-.ipynb_checkpoints/
-plots/
-figures/
-*.png
-*.pdf
-*.svg
+
 
 # Environment & configs
 .env
