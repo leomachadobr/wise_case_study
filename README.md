@@ -104,8 +104,7 @@ The `src/funnel_utils.py` module provides:
 
 ## 🔄 Data Flow
 
-```mermaid
-graph TD
+flowchart TD
     A[wise_funnel_events.csv] --> B[normalize_events()]
     B --> C[attach_transfer_keys()]
     C --> D[build_transfer_level()]
@@ -115,7 +114,6 @@ graph TD
     E --> H[Cohort Analysis]
     G --> I[Visualizations]
     H --> I
-```
 
 ## 📚 Additional Resources
 
