@@ -104,8 +104,7 @@ The `src/funnel_utils.py` module provides:
 
 ## 🔄 Data Flow
 
-```
-mermaid
+```mermaid
 graph TD
   Start((Start)) --> A[wise_funnel_events.csv]
   A --> B[normalize_events]
